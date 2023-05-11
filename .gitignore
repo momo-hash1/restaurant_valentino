@@ -1,0 +1,9 @@
+# package manager
+node_modules
+
+# build
+dist
+
+# misc
+.idea
+.vscode
