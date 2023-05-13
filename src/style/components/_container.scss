@@ -1,0 +1,18 @@
+@use "../size";
+
+.container{
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: size.$desktop) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.items{
+    width: 1200px;
+    box-sizing: border-box;
+    @media screen and (max-width: size.$desktop) {
+        width: 100%;    
+    }
+}   

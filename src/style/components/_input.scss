@@ -1,0 +1,23 @@
+@use "../colors";
+
+.input{
+    input{
+        width: 100%;
+        border: 1px solid colors.$green-color;
+        height: 60px;
+        font-size: 32px;
+        outline: none;
+        background: none;
+        color: colors.$white;
+    font-family: "moniqa-narrowparagraph";
+        box-sizing: border-box;
+    }
+}
+
+.input-title{
+    font-family: "moniqa-narrowparagraph";
+    font-size: 32px;
+    line-height: 33px;
+    color: colors.$white;
+    opacity: .4;
+}

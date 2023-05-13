@@ -1,12 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link href="../style/pages/index.scss" />
+  </head>
+  <body>
+    <!-- show mobile menu: .menu-active -->
+    <div class="header-wrapper ">
+      <header class="container ">
+        <div class="items">
+          <div class="header-top">
+            <div class="items">
+              <p class="address">г Воронеж пл. Ленина, 6/1</p>
+              <img src="../images/icons/log_valentino.svg" alt="" class="logo"/>
+              <a href="tel:+74732330330" class="phone">+7 (473) 233-03-30</a>
+              <div class="menu-opener">
+                <div class="hamburger">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <img src="../images/icons/close.svg" alt="" class="close">
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="header-bottom">
+            <div class="items">
+              <div class="links">
+                <a href="">О нас</a>
+                <a href="">Меню</a>
+                <a href="">Отзывы</a>
+                <a href="">События</a>
+                <a href="">Блог</a>
+                <a href="">Контакты</a>
+              </div>
+              <div class="buttons">
+                <button class="button-plain">Забронировать столик</button>
+                <button class="button-plain">Заказать доставку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="top-section container">
+        <div class="items">
+          <div class="offer">
+            <div class="offer-top">cовременный ресторан</div>
+            <div class="offer-middle">итальянской кухни</div>
+            <div class="offer-bottom">
+              <div class="buttons">
+                <button class="button-circle">Забронировать столик</button>
+                <button class="button-circle">Заказать доставку</button>
+              </div>
+              <div class="text">в центре Воронежа</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Ниже штуки для заднего фона хедера  -->
+      <div class="bg-overlay"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <img src="../images/icons/arc.svg" alt="" class="arc" />
+      <img
+        src="../images/9ca9f17bdb445a4e79139aae14d1b661.webp"
+        class="bg-img"
+      />
+    </div>
+    <main class="main-section">
+      <div class="container">
+        <div class="items about-restaurant">
+          <div class="title">О нашем ресторане</div>
+          <div class="accordion">
+            <div class="header">
+              <p>интерьер</p>
+              <img src="../images/icons/arror_up.svg" alt="" />
+            </div>
+            <div class="body about-rest-first">
+              <div class="start">
+                <img
+                  src="../images/b4cfdda8165ff4cbb7a834906ad40460.webp"
+                  alt=""
+                />
+              </div>
+              <div class="middle">
+                <img src="../images/interior_2.webp" alt="" />
+                <button class="button-circle button-circle-green">
+                  Узнать больше
+                </button>
+              </div>
+              <div class="end">
+                <img
+                  src="../images/89927ffb21d0fd230640182ff6182bc4.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="header">
+              <p>наш шеф</p>
+              <img src="../images/icons/arror_up.svg" alt="" />
+            </div>
+            <div class="body about-chef about-two-sections">
+              <div class="start">
+                <img src="../images/chef.webp" alt="" />
+              </div>
+              <div class="end texts">
+                <div class="text-wrapper">
+                  <div class="title">Сергей Викторович Боторин</div>
+                  <div class="text">
+                    Рыбатекст используется дизайнерами, проектировщиками
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержим. Рыбатекст используется дизайнерами
+                    прототипы содержим. Рыбатекст используется дизайнерами.
+                    Рыбатекст используется дизайнерами прототипы содержим...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="header">
+              <p>сомелье</p>
+              <img src="../images/icons/arror_up.svg" alt="" />
+            </div>
+            <div class="body about-wineguy about-two-sections">
+              <div class="end texts">
+                <div class="text-wrapper">
+                  <div class="title">
+                    Константин Константинович Константиновский
+                  </div>
+                  <div class="text">
+                    Рыбатекст используется дизайнерами, проектировщиками
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержим. Рыбатекст используется дизайнерами
+                    прототипы содержим. Рыбатекст используется дизайнерами.
+                    Рыбатекст используется дизайнерами прототипы содержим...
+                  </div>
+                </div>
+              </div>
+              <div class="start">
+                <img src="../images/wine_guy.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="items menu-section">
+          <div class="title-wrapper">
+            <div class="title">Меню</div>
+          </div>
+          <div class="menu-cards">
+            <a class="menu-card" href="">
+              <div class="button-wrapper">
+                <button class="button-circle button-circle-filled">
+                  Смотреть
+                </button>
+              </div>
+              <div class="wrapper-title">
+                <div class="name">кухня</div>
+              </div>
+              <img
+                src="../images/9ca9f17bdb445a4e79139aae14d1b661.webp"
+                alt=""
+                class="card-bg"
+              />
+            </a>
+            <a class="menu-card" href="">
+              <div class="button-wrapper">
+                <button class="button-circle button-circle-filled">
+                  Смотреть
+                </button>
+              </div>
+              <div class="wrapper-title">
+                <div class="name">кухня</div>
+              </div>
+              <img src="../images/bar_thumb.webp" class="card-bg" alt="" />
+            </a>
+            <a class="menu-card" href="">
+              <div class="button-wrapper">
+                <button class="button-circle button-circle-filled">
+                  Смотреть
+                </button>
+              </div>
+              <div class="wrapper-title">
+                <div class="title-with-elements name">
+                  <div>винная карта</div>
+                  <img src="../images/icons/pdf.svg" alt="" />
+                </div>
+              </div>
+              <img src="../images/wine_map.webp" class="card-bg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="items reserve-table">
+          <div class="wrapper">
+            <div class="title">Забронировать столик</div>
+          </div>
+          <div class="wrapper">
+            <div class="subtext">
+              С Вами свяжится наш менеджер и уточнит детали
+            </div>
+          </div>
+          <div class="divider"></div>
+          <form action="">
+            <div class="inputs">
+              <div class="input">
+                <p class="input-title">Имя</p>
+                <input type="text" required />
+              </div>
+              <div class="input">
+                <p class="input-title">Номер телефона</p>
+                <input type="tel" required />
+              </div>
+            </div>
+            <div class="wrapper submit">
+              <button class="button-circle button-circle-filled">
+                Отправить
+              </button>
+            </div>
+          </form>
+          <div class="wrapper">
+            <div class="disclaimer">
+              Нажимая на кнопки «Отправить» вы даете согласие на обработку
+              персональных данных
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="items reviews">
+          <div class="review">
+            <div class="wrapper">
+              <div class="avatar">
+                <div class="avatar-image-wrapper">
+                  <div class="avatar-image">
+                    <div></div>
+                    <img src="../images/customer_1.webp" alt="" />
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="title">Марина Спиридонова</div>
+                  <div class="date">25.05.2023</div>
+                  <div class="stars">
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                Рыбатекст используется дизайнерами, проектировщиками
+                фронтендерами, когда нужно быстро заполнить макеты или прототипы
+                содержим. Рыбатекст используется дизайнерами...
+              </div>
+              <div class="read-all">
+                <p>Читать весь отзыв</p>
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/arror_up.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-title">Отзывы</div>
+          <div class="empty"></div>
+          <div class="review">
+            <div class="wrapper">
+              <div class="avatar">
+                <div class="avatar-image-wrapper">
+                  <div class="avatar-image">
+                    <div></div>
+                    <img src="../images/customer_2.webp" alt="" />
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="title">Олег</div>
+                  <div class="date">25.05.2023</div>
+                  <div class="stars">
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                Рыбатекст используется дизайнерами, проектировщиками
+                фронтендерами, когда нужно быстро заполнить макеты или прототипы
+                содержим. Рыбатекст используется дизайнерами...
+              </div>
+              <div class="read-all">
+                <p>Читать весь отзыв</p>
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/arror_up.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="wrapper">
+              <div class="avatar">
+                <div class="avatar-image-wrapper">
+                  <div class="avatar-image no-image">
+                    <p>И</p>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="title">Ирина Валентинова</div>
+                  <div class="date">25.05.2023</div>
+                  <div class="stars">
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                    <img src="../images/icons/star_fill.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                Рыбатекст используется дизайнерами, проектировщиками
+                фронтендерами, когда нужно быстро заполнить макеты или прототипы
+                содержим. Рыбатекст используется дизайнерами...
+              </div>
+              <div class="read-all">
+                <p>Читать весь отзыв</p>
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/arror_up.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="show-all">
+            <button class="button-circle button-circle-green">
+              Читать все
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container events">
+        <div class="items">
+          <div class="swiper-header">
+            <div class="title">События</div>
+            <div class="nav">
+              <button class="button-circle nav-circle"><img src="../images/icons/arror_up.svg" alt=""></button>
+              <button class="button-circle nav-circle"><img src="../images/icons/arror_up.svg" alt=""></button>
+            </div>
+          </div>
+          <div class="swiper event-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide event-slide">
+                <div class="event-text-wrapper">
+                  <div class="event-text">
+                    <div class="title">Дегустация нового меню</div>
+                    <div class="date">26 апреля в 19:00</div>
+                    <div class="text">Рыбатекст используется дизайнерами, проектировщиками фронтендерами, когда нужно быстро заполнить макеты </div>
+                  </div>
+                </div>
+                <img src="../images/icons/circles.svg" class="circles" alt="">
+                <img src="../images/event_carousel.webp" alt="" class="event-bg">
+              </div>
+              <div class="swiper-slide event-slide">
+                <div class="event-text-wrapper">
+                  <div class="event-text">
+                    <div class="title">Дегустация нового меню</div>
+                    <div class="date">26 апреля в 19:00</div>
+                    <div class="text">Рыбатекст используется дизайнерами, проектировщиками фронтендерами, когда нужно быстро заполнить макеты </div>
+                  </div>
+                </div>
+                <img src="../images/icons/circles.svg" class="circles" alt="">
+                <img src="../images/event_caruosel_2.webp" alt="" class="event-bg">
+              </div>
+              <div class="swiper-slide event-slide">
+                <div class="event-text-wrapper">
+                  <div class="event-text">
+                    <div class="title">Дегустация нового меню</div>
+                    <div class="date">26 апреля в 19:00</div>
+                    <div class="text">Рыбатекст используется дизайнерами, проектировщиками фронтендерами, когда нужно быстро заполнить макеты </div>
+                  </div>
+                </div>
+                <img src="../images/icons/circles.svg" class="circles" alt="">
+                <img src="../images/event_caruosel_3.webp" alt="" class="event-bg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="items blog">
+          <div class="swiper-header">
+            <div class="nav">
+              <button class="button-circle nav-circle"><img src="../images/icons/arror_up.svg" alt=""></button>
+              <button class="button-circle nav-circle"><img src="../images/icons/arror_up.svg" alt=""></button>
+            </div>
+            <div class="title">Наш блог</div>
+          </div>
+          <div class="blog-swiper-wrapper">
+            <div class="swiper blog-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide blog-slide">
+                  <div class="image">
+                    <img src="../images/blog_1.webp" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="wrapper">
+                      <div class="date">25.04.2023</div>
+                      <div class="title">Рыбатекст используется дизайнерами, проектировщиками</div>
+                      <div class="text">Рыбатекст используется дизайнерами, проектировщиками фронтендерами, когда нужно быстро заполнить макеты или прототипы содержим. Рыбатекст используется дизайнерами прототипы содержим. Рыбатекст используется дизайнерами. Рыбатекст используется дизайнерами прототипы содержим...</div>
+                    </div>
+                    <div class="read">
+                      <div>Читать </div>
+                      <button class="button-circle nav-circle"><img src="../images/icons/arror_up.svg" alt=""></button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <button class="button-circle button-circle-green read-all">
+              Читать все
+            </button>
+          </div>
+        </div>
+      </div>
+      <img src="../images/icons/log_valentino.svg" class="bg-logo" alt="" />
+      <div class="bg-wrapper">
+        <div class="bg">
+          <img src="../images/texture.webp" alt="" />
+          <div></div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container top">
+        <div class="items">
+          <div class="contacts-us">
+            <div class="title">Свяжитесь с нами</div>
+            <div class="text">г Воронеж пл. Ленина, 6/1</div>
+            <div class="text">+7 (473) 233-03-30</div>
+            <div class="text">pinzeria-vrn@mail.ru</div>
+            <div class="socials">
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/telegram.svg" alt="">
+              </button>
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/whatsapp.svg" alt="">
+              </button>
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/vk.svg" alt="">
+              </button>
+            </div>
+          </div>
+          <div class="welcome">
+            <div class="working-hours">
+              <div class="sign">Добро пожаловать!</div>
+              <div class="hours">с 11:00 до 01:00</div>
+              <div class="sub-sign">Условия посещения</div>
+              <div class="bottom-sign">Без перерыва
+                и без выходных</div>
+            </div>
+            <div class="bottom-terms">
+              <div>Условия бронирования</div>
+              <div>Доставка и оплата</div>
+            </div>
+          </div>
+          <div class="how-find">
+            <div class="title">Как нас найти</div>
+            <img src="../images/icons/схема проезда.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container bottom">
+        <div class="items">
+          <div>© ООО «Название или ИП» 2023</div>
+          <a href="">Политика конфиденциальности</a>
+          <a class="logo" href="">разработано в: <img src="../images/icons/logo_accent.svg" alt=""></a>
+        </div>
+      </div>
+    </footer>
     <script src="../index.js"></script>
-</body>
+  </body>
 </html>

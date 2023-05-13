@@ -1,0 +1,167 @@
+@use "../colors";
+@use "../size";
+
+footer {
+  background-color: #1b1c1a;
+  color: colors.$white;
+  .title {
+    font-size: 64px;
+    line-height: 108%;
+    font-family: "moniqa-light-italic";
+  }
+  .top {
+    padding-top: 80px;
+  }
+  .top .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+  }
+  .text {
+    font-family: "moniqa-extralight";
+    font-size: 32px;
+  }
+  .contacts-us {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .socials {
+      display: flex;
+      gap: 10px;
+      button {
+        width: 60px;
+        background-color: colors.$green-dark;
+        border-color: colors.$green-dark;
+        height: 60px;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .welcome {
+    .working-hours {
+      height: 345px;
+      border: 1px solid rgba(87, 103, 72, 0.3);
+      border-radius: 190px 190px 0px 0px;
+      width: 380px;
+      * {
+        display: flex;
+        justify-content: center;
+      }
+      .sign {
+        margin-top: 95px;
+        font-size: 40px;
+        line-height: 108%;
+        font-family: "moniqa-narrowparagraph";
+      }
+      .hours {
+        font-size: 40px;
+        line-height: 108%;
+        font-family: "moniqa-light-italic";
+        margin-top: 40px;
+      }
+      .sub-sign {
+        font-size: 24px;
+        font-family: "moniqa-paragraph";
+        margin-top: 5px;
+      }
+      .bottom-sign {
+        font-family: "Roboto Flex";
+        font-weight: 100;
+        font-size: 18px;
+        margin-top: 40px;
+        color: colors.$text-gray;
+      }
+    }
+    .bottom-terms {
+      display: flex;
+      margin-top: 30px;
+      justify-content: space-between;
+      font-size: 24px;
+      font-family: "moniqa-paragraph";
+      padding-left: 30px;
+      padding-right: 30px;
+      box-sizing: border-box;
+    }
+  }
+  .how-find {
+    img {
+      margin-top: 40px;
+    }
+  }
+  .bottom {
+    border-top: 1px solid rgba(87, 103, 72, 0.3);
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    .items {
+      display: flex;
+      justify-content: space-between;
+      * {
+        font-family: "Roboto Flex";
+        font-weight: 100;
+        font-size: 16px;
+        color: colors.$text-gray;
+        text-decoration: none;
+      }
+      .logo {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        img {
+          width: 96px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .top .items {
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .top .items {
+      grid-template-columns: 1fr;
+    }
+    .welcome{
+
+      .bottom-terms{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .welcome{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .contacts-us{
+      align-items: center;
+    }
+    .how-find{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .bottom{
+      .items{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: size.$phone) {
+    .welcome{
+      .working-hours{
+        width: 100%;
+      }
+    }
+  }
+}
