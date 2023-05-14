@@ -9,6 +9,7 @@
         justify-content: space-between;
         position: relative;
         margin-bottom: 10px;
+        cursor: pointer;
         p{
             font-size: 60px;
             font-family: "moniqa-narrowparagraph";
@@ -16,6 +17,7 @@
         }
         img{
             width: 40px;
+            transform: rotate(180deg);
         }
     }
     .header::before{
@@ -29,8 +31,30 @@
     .body{
         margin-top: 30px;
         box-sizing: border-box;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
     }
     @media screen and (max-width: size.$tablet) {
         margin-right: 0;
     }
+    @media screen and (max-width: size.$phone) {
+        .header p {
+            font-size: 40px;
+        }
+        .header{
+            img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+.accordion-active{
+    .header{
+        img{
+            transform: rotate(0);
+        }
+    }
+
 }
