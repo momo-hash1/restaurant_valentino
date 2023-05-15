@@ -3,6 +3,7 @@
 .container{
     display: flex;
     justify-content: center;
+    z-index: 2;
     @media screen and (max-width: size.$desktop) {
         padding-right: 20px;
         padding-left: 20px;

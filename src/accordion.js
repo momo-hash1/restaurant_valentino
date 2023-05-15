@@ -6,7 +6,7 @@ const init_accordion = () => {
             if(body.style.maxHeight ){
                 body.style.maxHeight  = null
             }else{
-                body.style.maxHeight  = body.scrollHeight + "px"
+                body.style.maxHeight  = "min-content"
             }
         })
     })

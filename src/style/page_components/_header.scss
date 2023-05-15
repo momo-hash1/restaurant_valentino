@@ -50,10 +50,22 @@ header{
                 font-size: 32px;
                 font-family: "moniqa-paragraph";
                 margin-right: 40px;
+                position: relative;
             }
             a:last-child{
                 margin-right: 0;
             }
+        }
+        .link-active::before{
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: colors.$green-dark;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(50%);
         }
         .buttons{
             display: flex;
@@ -64,6 +76,18 @@ header{
         display: none;
     }
     @media screen and (max-width: size.$desktop) {
+        .link-active::before{
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: colors.$green-dark;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(50%);
+            top: 0;
+        }
         .menu-opener{
             display: block;
         }

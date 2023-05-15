@@ -1,0 +1,49 @@
+@use "../colors";
+@use "../size";
+@use "../components/input";
+
+
+.reserve-table {
+    margin-top: 200px;
+    color: colors.$white;
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .title {
+      font-size: 80px;
+      font-family: "moniqa-thincondensed";
+      text-align: center;
+    }
+
+    .divider {
+      margin-top: 16px;
+    }
+    .inputs {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .submit {
+      margin-top: 30px;
+    }
+    .disclaimer {
+      margin-top: 20px;
+      font-family: "Roboto Flex", sans-serif;
+      font-size: 14px;
+      line-height: 140%;
+      color: colors.$text-gray;
+    }
+    @media screen and (max-width: size.$tablet) {
+      .inputs {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: size.$phone) {
+      .subtext{
+        font-size: 16px;
+      }
+    }
+  }

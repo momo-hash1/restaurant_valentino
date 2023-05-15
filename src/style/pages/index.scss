@@ -2,11 +2,12 @@
 @use "../page_components/header";
 @use "../colors";
 @use "../components/accordion";
-@use "../components/input";
 @use "../components/review";
 @use "../page_components/footer";
 @use "../size";
 @use "../text";
+@use "../components/reserve_table";
+@use "../components/textured_bg";
 
 .top-section {
   position: relative;
@@ -26,7 +27,7 @@
   .bg-img {
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -37,7 +38,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba($color: #080a0799, $alpha: 0.6);
-    z-index: 2;
+    z-index: 1;
   }
   .circle {
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -81,19 +82,15 @@
   display: flex;
   flex-direction: column;
   .offer-top {
-    font-size: 150px;
     font-family: "moniqa-thincondensed";
     margin-top: 10px;
-    align-self: center;
+    align-self: flex-end;
   }
   .offer-middle {
     font-family: "moniqa-light-italic";
-    font-size: 150px;
-    line-height: 108%;
   }
   .offer-bottom {
     .text {
-      font-size: 150px;
       font-family: "moniqa-thincondensed";
     }
     .buttons {
@@ -105,51 +102,26 @@
     gap: 40px;
   }
   @media screen and (max-width: size.$desktop_small) {
-    .offer-top{
-      font-size: 120px;
-    }
-    .offer-middle{
-      font-size: 120px;
-    }
+
     .offer-bottom{
       button{
         width: 150px;
         height: 150px;
       }
-      .text{
-        font-size: 120px;
-      }
     }
   }
   @media screen and (max-width: size.$tablet) {
     margin-bottom: 100px;
-    .offer-top{
-      font-size: 100px;
-    }
-    .offer-middle{
-      font-size: 100px;
-    }
+
     .offer-bottom{
       flex-direction: column-reverse;
-      .text{
-        font-size: 100px;
-      }
       .buttons{
         display: flex;
       }
     }
   }
   @media screen and (max-width: size.$phone) {
-    .offer-top{
-      font-size: 80px;
-    }
-    .offer-middle{
-      font-size: 80px;
-    }
     .offer-bottom{
-      .text{
-        font-size: 80px;
-      }
        button{
         width: 110px;
         height: 110px;
@@ -167,36 +139,8 @@
 .main-section {
   position: relative;
   overflow: hidden;
-  .bg {
-    height: 100%;
-    position: relative;
-    div {
-      background-color: #30312f;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      position: absolute;
-    }
-    img {
-      z-index: 2;
-      position: absolute;
-      mix-blend-mode: luminosity;
-      opacity: 0.1;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-  .bg-wrapper {
-    height: 100%;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    z-index: -2;
-  }
   .bg-logo {
-    z-index: -1;
+    z-index: 1  ;
     position: absolute;
     top: 115px;
     left: 965px;
@@ -298,13 +242,6 @@
     font-size: 65px;
     font-family: "moniqa-light-italic";
   }
-  .text {
-    font-family: "Roboto Flex", sans-serif;
-    font-weight: 200;
-    color: colors.$text-gray;
-    line-height: 160%;
-    font-size: 20px;
-  }
   .texts {
     display: flex;
     align-items: center;
@@ -324,9 +261,6 @@
   @media screen and (max-width: size.$phone) {
     .title{
       font-size: 40px;
-    }
-    .text{
-      font-size: 16px;
     }
   }
 }
@@ -423,55 +357,6 @@
       rgba(31, 32, 31, 0.8) 21%,
       rgba(31, 32, 31, 0) 82%
     );
-  }
-}
-.reserve-table {
-  margin-top: 200px;
-  color: colors.$white;
-  .wrapper {
-    display: flex;
-    justify-content: center;
-  }
-  .title {
-    font-size: 80px;
-    font-family: "moniqa-thincondensed";
-    text-align: center;
-  }
-  .subtext {
-    font-family: "Roboto Flex", sans-serif;
-    font-size: 20px;
-    line-height: 140%;
-    color: colors.$text-gray;
-  }
-  .divider {
-    margin-top: 16px;
-  }
-  .inputs {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .submit {
-    margin-top: 30px;
-  }
-  .disclaimer {
-    margin-top: 20px;
-    font-family: "Roboto Flex", sans-serif;
-    font-size: 14px;
-    line-height: 140%;
-    color: colors.$text-gray;
-  }
-  @media screen and (max-width: size.$tablet) {
-    .inputs {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  @media screen and (max-width: size.$phone) {
-    .subtext{
-      font-size: 16px;
-    }
   }
 }
 
@@ -673,12 +558,8 @@
       margin-top: 20px;
     }
     .text {
-      font-family: "Roboto Flex";
       margin-top: 20px;
-      font-weight: 200;
-      font-size: 20px;
-      line-height: 160%;
-      color: colors.$text-gray;
+
     }
     .content {
       display: flex;
@@ -726,9 +607,6 @@
       }
       .date{
         font-size: 30px;
-      }
-      .text{
-        font-size: 16px;
       }
     }
   }

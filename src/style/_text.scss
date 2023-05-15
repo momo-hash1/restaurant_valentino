@@ -1,15 +1,41 @@
 @use "size";
 @use "colors";
 
-.title-header{
+.title-header {
+  font-size: 120px;
+  font-family: "moniqa-light-italic";
+  color: colors.$white;
+  line-height: 108%;
+  @media screen and (max-width: size.$tablet) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: size.$phone) {
+    font-size: 60px;
+  }
+}
+
+.main-header {
+  line-height: 108%;
+  font-size: 150px;
+  color: colors.$white;
+  @media screen and (max-width: size.$desktop_small) {
     font-size: 120px;
-    font-family: "moniqa-light-italic";
-    color: colors.$white;
-    line-height: 108%;
-    @media screen and (max-width: size.$tablet) {
-        font-size: 90px;
-    }
-    @media screen and (max-width: size.$phone) {
-        font-size: 60px;
-    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: size.$phone) {
+    font-size: 80px;
+  }
+}
+
+.base-text {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 200;
+  color: colors.$text-gray;
+  line-height: 160%;
+  font-size: 20px;
+  @media screen and (max-width: size.$phone) {
+    font-size: 16px;
+  }
 }
