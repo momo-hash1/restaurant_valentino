@@ -5,183 +5,230 @@
 @use "../components/buttons";
 @use "../components/popup";
 
-header{
-    background: rgba($color: #000000, $alpha: .2);
-    backdrop-filter: blur(5px);
-    position: relative;
-    z-index: 5;
-    .header-top{
-        position: relative;
-        margin-top: 10px;
-        .items{
-            display: flex;
-            justify-content: space-between;
-            
-            align-items: center;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            p, a{
-                font-family: "moniqa-extralight";
-                text-decoration: none;
-                color: colors.$white;
-                font-size: 32px;
-            }
-            .logo{
-                width: 355px;
-            }
-        }
-    }
-    .header-bottom{
-
-        margin-top: 10px;
-        margin-bottom: 5px;
-        display: flex;
-        justify-content: center;
-        .items{
-            display: flex;
-            justify-content: space-between;
-            width: calc(100% - 180px);
-        }
-        .links{
-            display: flex;
-            a{
-                color: colors.$white;
-                text-decoration: none;
-                font-size: 32px;
-                font-family: "moniqa-paragraph";
-                margin-right: 40px;
-                position: relative;
-            }
-            a:last-child{
-                margin-right: 0;
-            }
-        }
-        .link-active::before{
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: colors.$green-dark;
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(50%);
-        }
-        .buttons{
-            display: flex;
-            gap: 20px;
-        }
-    }
-    .menu-opener{
-        display: none;
-    }
-    @media screen and (max-width: size.$desktop) {
-        .link-active::before{
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: colors.$green-dark;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(50%);
-            top: 0;
-        }
-        .menu-opener{
-            display: block;
-        }
-        .header-top{
-            .items{
-                justify-content: center;
-                .address{
-                    display: none;
-                }
-                .phone{
-                    display: none;
-                }
-            }
-        }
-        .header-bottom{
-            display: none;
-        }
-    }
-    @media screen and (max-width: size.$tablet) {
-        .header-top{
-            .items .logo{
-                width: 255px;
-            }
-        }
-    }
-
-    @media screen and (max-width: size.$phone) {
-        .header-top{
-            .items .logo{
-                width: 200px;
-            }
-        }
-    }
-}
-
-.menu-opener{
+.header-wrapper {
+  overflow: hidden;
+  position: relative;
+  .bg-img {
     position: absolute;
-    right: 0;
-    cursor: pointer;
-    .close{
-        width: 25px;
-        display: none;
-    }
-    .hamburger{
-        width: 25px;
-        height: 20px;
-        display: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        div{
-            display: block;
-            background-color: #fff;
-            width: 100%;
-            height: 1px;
-        }
-    }
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .bg-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #080a0799, $alpha: 0.6);
+    z-index: 1;
+  }
+  header{
+    z-index: 4;
+  }
 }
 
-.menu-active{
 
-    header{
+header {
+  background: rgba($color: #000000, $alpha: 0.2);
+  backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 5;
+  overflow: auto;
+
+  z-index: 4;
+
+  .header-top {
+    position: relative;
+    margin-top: 10px;
+    .items {
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      p,
+      a {
+        font-family: "moniqa-extralight";
+        text-decoration: none;
+        color: colors.$white;
+        font-size: 32px;
+      }
+      .logo {
+        width: 355px;
+      }
+    }
+  }
+  .header-bottom {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    
+    justify-content: center;
+    .items {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 180px);
+    }
+    .links {
+      display: flex;
+      a {
+        color: colors.$white;
+        text-decoration: none;
+        font-size: 32px;
+        font-family: "moniqa-paragraph";
+        margin-right: 40px;
+        position: relative;
+      }
+      a:last-child {
+        margin-right: 0;
+      }
+    }
+    .link-active::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: colors.$green-dark;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(50%);
+    }
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  .menu-opener {
+    display: none;
+  }
+  @media screen and (max-width: size.$desktop) {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    .divider{
+      margin-top: 10px;
+    }
+    .header-top {
+      height: 50px;
+      .logo{
         height: 100%;
-        box-sizing: border-box;
-        position: fixed;
-        z-index: 6;
-        width: 100%;
-        transition: height 1s ease;
+
+      }
+      .items {
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 100%;
+      }
     }
-    .close{
-        display: block;
+    .link-active::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: colors.$green-dark;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(50%);
+      top: 0;
     }
-    .hamburger{
-        display: none;
+    .menu-opener {
+      display: block;
     }
-    header .header-bottom{
-        display: block;
-        .items{
-            flex-direction: column;
-            width: 100%;
-            margin-top: 40px;
+    .header-top {
+      .items {
+        justify-content: center;
+        .address {
+          display: none;
         }
-        .links{
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            a{
-                margin-right: 0;
-                font-size: 50px;
-            }
+        .phone {
+          display: none;
         }
-        .buttons{
-            margin-top: 20px;
-            flex-direction: column;
-        }
+      }
     }
+    .header-bottom {
+      display: none;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .header-top {
+      .items .logo {
+        width: 255px;
+      }
+    }
+  }
+
+  @media screen and (max-width: size.$phone) {
+    .header-top {
+      .items .logo {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.menu-opener {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  .close {
+    width: 25px;
+    display: none;
+  }
+  .hamburger {
+    width: 25px;
+    height: 20px;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div {
+      display: block;
+      background-color: #fff;
+      width: 100%;
+      height: 1px;
+    }
+  }
+}
+
+.menu-active {
+  header {
+    height: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    transition: height 1s ease;
+  }
+  .close {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+  header .header-bottom {
+    display: block;
+    .items {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 40px;
+    }
+    .links {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      a {
+        margin-right: 0;
+        font-size: 50px;
+      }
+    }
+    .buttons {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+  }
 }

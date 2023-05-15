@@ -40,9 +40,13 @@ footer {
         background-color: colors.$green-dark;
         border-color: colors.$green-dark;
         height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       img {
         width: 30px;
+        height: 30px;
       }
     }
   }
@@ -73,6 +77,11 @@ footer {
         font-size: 24px;
         font-family: "moniqa-paragraph";
         margin-top: 5px;
+        background: none;
+        color: colors.$white;
+      }
+      .sub-sign:hover {
+        opacity: 0.5;
       }
       .bottom-sign {
         font-family: "Roboto Flex";

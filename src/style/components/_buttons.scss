@@ -26,6 +26,9 @@ button {
   color: colors.$white;
   border: 1px solid colors.$white;
   background: none;
+  transition-property: background;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
   @media screen and (max-width: size.$phone) {
     width: calc($btn_size / 1.5);
     height: calc($btn_size / 1.5);

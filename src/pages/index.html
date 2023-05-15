@@ -11,11 +11,11 @@
     <!-- show mobile menu: .menu-active -->
     <div class="header-wrapper">
       <header class="container">
-        <div class="items">
+        <div class="parent items">
           <div class="header-top">
             <div class="items">
               <p class="address">г Воронеж пл. Ленина, 6/1</p>
-              <a href="/ main-header">
+              <a href="/" class="logo">
                 <img
                   src="../images/icons/log_valentino.svg"
                   alt=""
@@ -55,8 +55,10 @@
       <section class="top-section container">
         <div class="items">
           <div class="offer">
-            <div class="offer-top main-header">cовременный ресторан</div>
-            <div class="offer-middle main-header">итальянской кухни</div>
+            <div class="offer-wrapper">
+              <div class="offer-top main-header">cовременный ресторан</div>
+              <div class="offer-middle main-header">итальянской кухни</div>
+            </div>
             <div class="offer-bottom">
               <div class="buttons">
                 <button class="button-circle popup-initiator" data-to="reserve-table">Забронировать столик</button>
@@ -496,7 +498,7 @@
                   <div class="title">Забронировать столик</div>
                 </div>
                 <div class="wrapper">
-                  <div class="subtext">
+                  <div class="subtext base-text">
                     С Вами свяжится наш менеджер и уточнит детали
                   </div>
                 </div>
@@ -540,7 +542,7 @@
                   <div class="title">Заказать доставку</div>
                 </div>
                 <div class="wrapper">
-                  <div class="subtext">
+                  <div class="subtext base-text">
                     С Вами свяжится наш менеджер и уточнит детали
                   </div>
                 </div>
@@ -627,23 +629,31 @@
             <div class="text">+7 (473) 233-03-30</div>
             <div class="text">pinzeria-vrn@mail.ru</div>
             <div class="socials">
-              <button class="button-circle button-circle-green">
-                <img src="../images/icons/telegram.svg" alt="" />
-              </button>
-              <button class="button-circle button-circle-green">
-                <img src="../images/icons/whatsapp.svg" alt="" />
-              </button>
-              <button class="button-circle button-circle-green">
-                <img src="../images/icons/vk.svg" alt="" />
-              </button>
+              <a href="">
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/telegram.svg" alt="" />
+                </button>
+              </a>
+              <a href="">
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/whatsapp.svg" alt="" />
+                </button>
+              </a>
+              <a href="">
+                <button class="button-circle button-circle-green">
+                  <img src="../images/icons/vk.svg" alt="" />
+                </button>
+              </a>
             </div>
           </div>
           <div class="welcome">
             <div class="working-hours">
               <div class="sign">Добро пожаловать!</div>
               <div class="hours">с 11:00 до 01:00</div>
-              <div class="sub-sign popup-initiator" data-to="visit-terms">Условия посещения</div>
-              <div class="bottom-sign">Без перерыва и без выходных</div>
+              <div>
+                <button class="sub-sign popup-initiator" data-to="visit-terms">Условия посещения</button> 
+              </div>
+              <div class="bottom-sign">Без перерыва<br>и без выходных</div>
             </div>
             <div class="bottom-terms">
               <div>Условия бронирования</div>

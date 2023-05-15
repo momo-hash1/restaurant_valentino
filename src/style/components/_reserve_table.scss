@@ -15,7 +15,11 @@
       font-family: "moniqa-thincondensed";
       text-align: center;
     }
-
+    .button-circle{
+      width: 140px;
+      height: 140px;
+      background-color: colors.$green-dark;
+    }
     .divider {
       margin-top: 16px;
     }
@@ -34,6 +38,8 @@
       font-size: 14px;
       line-height: 140%;
       color: colors.$text-gray;
+      width: 340px;
+      text-align: center;
     }
     @media screen and (max-width: size.$tablet) {
       .inputs {
