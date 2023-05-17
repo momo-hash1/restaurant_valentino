@@ -1,0 +1,27 @@
+@use "../colors";
+
+.winemap{
+    .button-circle{
+        background-color: colors.$green-dark;
+        border-color: colors.$green-dark;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 100;
+        img{
+            width: 55px;
+            margin-bottom: 10px;
+        }
+    }
+    .button-circle:hover{
+        background-color: colors.$green-dark;
+        border-color: colors.$green-color;
+    }
+    .menu-wrapper{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}

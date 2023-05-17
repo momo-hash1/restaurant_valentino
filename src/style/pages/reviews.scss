@@ -1,0 +1,56 @@
+@use "../base";
+@use "../page_components/header";
+@use "../colors";
+@use "../page_components/footer";
+@use "../size";
+@use "../text";
+@use "../components/reserve_table";
+@use "../components/container";
+@use "../components/textured_bg";
+@use "../components/review";
+
+.reviews-section{
+    margin-bottom: 100px;
+    .reviews{
+        margin-top: 100px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .main-title{
+        font-size: 150px;
+        color: colors.$white;
+        text-align: center;
+        font-family: "moniqa-thincondensed" ;
+    }
+    .review{
+        margin-bottom: 100px;
+        .base-text{
+            text-align: center;
+        }
+    }
+    .load-more{
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width: size.$desktop_small) {
+        .reviews{
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+    }
+    @media screen and (max-width: size.$tablet) {
+        .reviews{
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+    }
+    @media screen and (max-width: size.$phone) {
+        .reviews{
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .button-circle{
+        border-color: colors.$green-dark;
+    }
+}

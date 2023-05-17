@@ -221,3 +221,11 @@ header {
     }
   }
 }
+
+
+.top-section{
+  margin-top: 50px;
+  @media screen and (max-width: size.$desktop) {
+    margin-top: calc(50px + size.$mobile-header-height);
+  }
+}

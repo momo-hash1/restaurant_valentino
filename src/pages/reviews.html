@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="../style/pages/index.scss" />
   </head>
   <body>
     <!-- show mobile menu: .menu-active -->
-    <div class="header-wrapper">
+    <div class="header-wrapper textured-bg">
       <header class="container">
         <div class="parent items">
           <div class="header-top">
@@ -37,8 +36,8 @@
           <div class="header-bottom">
             <div class="items">
               <div class="links">
-                <a href="about.html">О нас</a>
-                <a href="menu_kitchen.html" class="link-active">Меню</a>
+                <a href="about.html" class="link-active">О нас</a>
+                <a href="menu_kitchen.html">Меню</a>
                 <a href="reviews.html">Отзывы</a>
                 <a href="event.html">События</a>
                 <a href="blog.html">Блог</a>
@@ -62,26 +61,103 @@
           </div>
         </div>
       </header>
-      <section class="top-section container winemap">
-        <div class="items">
-          <div class="title-header">Меню</div>
-          <div class="menu-categories">
-            <a href="menu_kitchen.html">кухня</a>
-            <a href="menu_bar.html">бар</a>
-            <a href="menu_winemap.html" class="menu-cat-active">винная карта</a>
+      <section class="top-section">
+        <div class="reviews-section container">
+          <div class="items">
+            <div class="main-title">Отзывы</div>
+            <div class="reviews">
+              <div class="review">
+                <div class="wrapper">
+                  <div class="avatar">
+                    <div class="avatar-image-wrapper">
+                      <div class="avatar-image">
+                        <div></div>
+                        <img src="../images/customer_1.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="description">
+                      <div class="title">Марина Спиридонова</div>
+                      <div class="date">25.05.2023</div>
+                      <div class="stars">
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="base-text">
+                    Рыбатекст используется дизайнерами, проектировщиками
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержим. Рыбатекст используется дизайнерами...
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="wrapper">
+                  <div class="avatar">
+                    <div class="avatar-image-wrapper">
+                      <div class="avatar-image">
+                        <div></div>
+                        <img src="../images/customer_2.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="description">
+                      <div class="title">Олег</div>
+                      <div class="date">25.05.2023</div>
+                      <div class="stars">
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="base-text">
+                    Рыбатекст используется дизайнерами, проектировщиками
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержим. Рыбатекст используется дизайнерами...
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="wrapper">
+                  <div class="avatar">
+                    <div class="avatar-image-wrapper">
+                      <div class="avatar-image no-image">
+                        <p>И</p>
+                      </div>
+                    </div>
+                    <div class="description">
+                      <div class="title">Ирина Валентинова</div>
+                      <div class="date">25.05.2023</div>
+                      <div class="stars">
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                        <img src="../images/icons/star_fill.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="base-text">
+                    Рыбатекст используется дизайнерами, проектировщиками
+                    фронтендерами, когда нужно быстро заполнить макеты или
+                    прототипы содержим. Рыбатекст используется дизайнерами...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="load-more">
+              <button class="button-circle">Загрузить еще</button>
+            </div>
           </div>
-          <a href="" class="menu-wrapper">
-              <button class="button-circle"><img src="../images/icons/pdf.svg" alt=""> Смотреть</button>
-          </a>
         </div>
       </section>
       <!-- Ниже штуки для заднего фона хедера  -->
-      <div class="bg-overlay"></div>
-
-      <img
-        src="../images/wine_map.webp"
-        class="bg-img"
-      />
+      <div class="bg-texture"></div>
     </div>
     <footer>
       <div class="popup-overlay">
@@ -93,7 +169,7 @@
                   <div class="title">Забронировать столик</div>
                 </div>
                 <div class="wrapper">
-                  <div class="subtext base-text">
+                  <div class="subtext">
                     С Вами свяжится наш менеджер и уточнит детали
                   </div>
                 </div>
@@ -137,7 +213,7 @@
                   <div class="title">Заказать доставку</div>
                 </div>
                 <div class="wrapper">
-                  <div class="subtext base-text">
+                  <div class="subtext">
                     С Вами свяжится наш менеджер и уточнит детали
                   </div>
                 </div>
@@ -242,33 +318,25 @@
             <div class="text">+7 (473) 233-03-30</div>
             <div class="text">pinzeria-vrn@mail.ru</div>
             <div class="socials">
-              <a href="">
-                <button class="button-circle button-circle-green">
-                  <img src="../images/icons/telegram.svg" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button class="button-circle button-circle-green">
-                  <img src="../images/icons/whatsapp.svg" alt="" />
-                </button>
-              </a>
-              <a href="">
-                <button class="button-circle button-circle-green">
-                  <img src="../images/icons/vk.svg" alt="" />
-                </button>
-              </a>
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/telegram.svg" alt="" />
+              </button>
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/whatsapp.svg" alt="" />
+              </button>
+              <button class="button-circle button-circle-green">
+                <img src="../images/icons/vk.svg" alt="" />
+              </button>
             </div>
           </div>
           <div class="welcome">
             <div class="working-hours">
               <div class="sign">Добро пожаловать!</div>
               <div class="hours">с 11:00 до 01:00</div>
-              <div>
-                <button class="sub-sign popup-initiator" data-to="visit-terms">
-                  Условия посещения
-                </button>
+              <div class="sub-sign popup-initiator" data-to="visit-terms">
+                Условия посещения
               </div>
-              <div class="bottom-sign">Без перерыва<br />и без выходных</div>
+              <div class="bottom-sign">Без перерыва и без выходных</div>
             </div>
             <div class="bottom-terms">
               <div>Условия бронирования</div>
@@ -291,7 +359,6 @@
         </div>
       </div>
       <img src="../images/icons/circles.svg" class="bg-image" alt="" />
-    </footer> 
-    <script src="../menu_winemap.js"></script>
+    </footer>
   </body>
 </html>

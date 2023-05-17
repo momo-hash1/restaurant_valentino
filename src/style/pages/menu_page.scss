@@ -9,7 +9,6 @@
 @use "../components/textured_bg";
 
 .top-section {
-  margin-top: calc(50px + size.$mobile-header-height);
   margin-bottom: 55px;
   .items {
     position: relative;
