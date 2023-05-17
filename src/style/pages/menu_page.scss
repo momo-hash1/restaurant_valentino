@@ -1,0 +1,402 @@
+@use "../base";
+@use "../page_components/header";
+@use "../colors";
+@use "../page_components/footer";
+@use "../size";
+@use "../text";
+@use "../components/reserve_table";
+@use "../components/container";
+@use "../components/textured_bg";
+
+.top-section {
+  margin-top: calc(50px + size.$mobile-header-height);
+  margin-bottom: 55px;
+  .items {
+    position: relative;
+    z-index: 3;
+  }
+  .title-header {
+    text-align: center;
+    font-family: "moniqa-thincondensed";
+  }
+}
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 5px;
+  a {
+    position: relative;
+    font-family: "moniqa-narrowparagraph";
+    text-decoration: none;
+    font-size: 60px;
+    line-height: 108%;
+
+    color: colors.$white;
+  }
+  @media screen and (max-width: size.$phone) {
+    a {
+      font-size: 35px;
+    }
+  }
+}
+
+.menu-cat-active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  left: 0;
+  bottom: 0;
+  margin-top: 5px;
+}
+
+.sub-category {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 65px;
+  li {
+    list-style: none;
+    font-family: "Roboto Flex";
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 140%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 4px 15px 4px 15px;
+    a {
+      text-decoration: none;
+      color: colors.$text-gray;
+    }
+  }
+  .sub-category-active {
+    background-color: colors.$green-dark;
+    a {
+      color: colors.$white;
+    }
+  }
+}
+
+.sub-category li:hover {
+  background-color: colors.$green-dark;
+  a {
+    color: colors.$white;
+  }
+}
+
+.menu-cards {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @mixin card() {
+    background: #1f201f;
+    position: relative;
+    overflow: hidden;
+    height: 630px;
+    .content-overlay {
+      z-index: 3;
+      position: relative;
+      box-sizing: border-box;
+      padding: 40px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      .quantity {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        .item {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background: colors.$green-dark;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: colors.$white;
+          font-family: "moniqa-thincondensed";
+          line-height: 108%;
+          .amount {
+            font-size: 64px;
+            line-height: 108%;
+          }
+          .measurement {
+            font-size: 32px;
+          }
+        }
+      }
+      .title {
+        font-family: "moniqa-paragraph";
+        text-align: start;
+      }
+      .text {
+        font-family: "Roboto Flex";
+        font-weight: 200;
+        line-height: 140%;
+        color: colors.$white;
+        margin-top: 20px;
+      }
+      .subtext {
+        font-family: "Roboto Flex";
+        font-style: italic;
+        font-weight: 200;
+        line-height: 140%;
+        margin-top: 20px;
+        color: #787878;
+      }
+    }
+    .item-image {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .item-image-wrapper {
+      width: 100%;
+      top: 0;
+      position: absolute;
+    }
+
+    @media screen and (max-width: size.$desktop_small) {
+      .content-overlay {
+        .quantity {
+          .item {
+            width: 80px;
+            height: 80px;
+            .amount {
+              font-size: 54px;
+            }
+            .measurement {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: size.$phone) {
+      .circles {
+        display: none;
+      }
+      .content-overlay {
+        .title {
+          font-size: 40px;
+        }
+        .ingredients {
+          font-size: 16px;
+        }
+        .food-value {
+          font-size: 14px;
+        }
+        .quantity {
+          .item {
+            width: 70px;
+            height: 70px;
+            .amount {
+              font-size: 44px;
+            }
+            .measurement {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 80px;
+    line-height: 108%;
+    font-family: "moniqa-light-italic";
+    color: colors.$white;
+  }
+  .cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .card-special {
+    grid-area: auto / 1 / auto / 3;
+    @include card();
+    .content-overlay {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+      .quantity {
+        height: min-content;
+        justify-content: end;
+      }
+      .content {
+        .title {
+          margin-top: 175px;
+          font-size: 70px;
+        }
+        .ingredients {
+          font-size: 24px;
+        }
+        .food-value {
+          font-size: 20px;
+        }
+      }
+    }
+    .gradient{
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      background: radial-gradient(ellipse at 84% 31%, rgba(255, 255, 0, 0) 4%, rgba(31, 32, 31, 1) 66%);
+      background-repeat: no-repeat;
+    }
+    .special {
+      font-family: "moniqa-light-italic";
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      font-size: 80px;
+      line-height: 108%;
+      padding: 25px 60px 25px 40px;
+      background: #cca949;
+      border-radius: 0px 0px 79px 0px;
+      display: flex;
+      align-items: center;
+    }
+    .item-image-wrapper{
+      .item-image, .gradient{
+        width: 80%;
+      }
+      height: 100%;
+      display: flex;
+      justify-content: end;
+    }
+    @media screen and (max-width: size.$tablet) {
+      height: max-content;
+      grid-area: auto;
+      .special-wrapper {
+        display: flex;
+      }
+      .special {
+        font-size: 50px;
+        position: relative;
+      }
+      .content-overlay {
+        display: flex;
+        flex-direction: column-reverse;
+        .quantity {
+          justify-content: start;
+          margin-top: 175px;
+        }
+        .content {
+          .ingredients {
+            font-size: 16px;
+          }
+          .title {
+            font-size: 40px;
+            margin-top: 40px;
+          }
+        }
+      }
+      .item-image-wrapper{
+        height: 50%;
+      }
+    }
+    @media screen and (max-width: size.$phone) {
+      .special {
+        padding: 25px 20px 25px 30px;
+      }
+    }
+  }
+  .card {
+    @include card();
+    .item-image-wrapper {
+      height: 380px;
+    }
+    .title {
+      font-size: 50px;
+    }
+    .text {
+      font-size: 20px;
+    }
+    .subtext {
+      font-size: 16px;
+    }
+    .content-overlay {
+      flex-direction: column;
+    }
+    .nutrients,
+    .calorie {
+      display: flex;
+      gap: 10px;
+    }
+    .circles {
+      position: absolute;
+      z-index: 2;
+      bottom: -120px;
+      left: 270px;
+      opacity: 0.15;
+    }
+
+    .gradient {
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      left: 0;
+    }
+    .gradient:nth-child(1) {
+      width: 260px;
+      height: 100%;
+      background: linear-gradient(90deg, #1f201f 0%, rgba(31, 32, 31, 0) 100%);
+    }
+    .gradient:nth-child(2) {
+      width: 100%;
+      height: 160px;
+      bottom: -1px;
+      top: unset;
+      background: linear-gradient(
+        180deg,
+        rgba(31, 32, 31, 0) 0%,
+        rgba(31, 32, 31, 0.35) 20.91%,
+        rgba(31, 32, 31, 0.64) 44.26%,
+        rgba(31, 32, 31, 0.94) 73.22%,
+        #1f201f 100%
+      );
+    }
+    @media screen and (max-width: size.$phone) {
+      .circles {
+        display: none;
+      }
+    }
+  }
+
+  .back-up{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    button{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 100;
+      border-color: colors.$green-dark;
+      div{
+        display: flex;
+        align-self: center;
+      }
+      img{
+        align-self: center;
+        width: 26px;
+      }
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

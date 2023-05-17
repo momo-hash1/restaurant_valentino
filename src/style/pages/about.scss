@@ -9,7 +9,7 @@
 @use "../components/textured_bg";
 
 .about-us {
-  margin-top: 50px;
+  margin-top: calc(50px + size.$mobile-header-height);
   .items {
     display: flex;
     justify-content: space-between;

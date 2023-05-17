@@ -124,18 +124,7 @@ header {
         height: 100%;
       }
     }
-    .link-active::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: colors.$green-dark;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(50%);
-      top: 0;
-    }
+
     .menu-opener {
       display: block;
     }

@@ -90,7 +90,7 @@
     gap: 40px;
   }
   @media screen and (max-width: size.$desktop_small) {
-    margin-top: calc(50px + 72px);
+    margin-top: calc(50px + size.$mobile-header-height);
     .offer-wrapper {
       margin-right: 0;
     }
