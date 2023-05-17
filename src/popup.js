@@ -15,23 +15,24 @@ const hide_popups = () => {
     const close = popup.querySelector(".close-btn");
     if (close === null) return;
     close.addEventListener("click", () => {
-      popup.classList.remove("show-popup");
-      document.querySelector(".popup-overlay").classList.remove("show-popups");
-      show_scroll();
+      hide_popup()
     });
   });
 
   document.querySelector(".popup-overlay").addEventListener("click", (e) => {
     if (e.target.classList.contains("popup-wrapper")) {
-        document.querySelectorAll(".popup-wrapper").forEach((popup) => {
-          popup.classList.remove("show-popup");
-          document.querySelector(".popup-overlay").classList.remove("show-popups");
-        });
-        show_scroll();
-    };
-
+      hide_popup()
+    }
   });
 };
+
+const hide_popup = () => {
+  document.querySelectorAll(".popup-wrapper").forEach((popup) => {
+    popup.classList.remove("show-popup");
+    document.querySelector(".popup-overlay").classList.remove("show-popups");
+  });
+  show_scroll();
+}
 
 const show_scroll = () => {
   if (document.querySelector(".menu-active") !== null) return;
