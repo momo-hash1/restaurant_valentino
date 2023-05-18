@@ -1,0 +1,207 @@
+@use "../base";
+@use "../page_components/header";
+@use "../colors";
+@use "../page_components/footer";
+@use "../size";
+@use "../text";
+@use "../components/reserve_table";
+@use "../components/container";
+@use "../components/textured_bg";
+
+.header-wrapper {
+  height: 740px;
+  .bg-image-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  .bg-image-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.29) 34.4%,
+        rgba(0, 0, 0, 0) 61.97%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
+  .bg-img {
+    position: relative;
+  }
+}
+
+.main-section {
+  position: relative;
+}
+.contacts-wrapper {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contacts {
+  transform: translateY(-50%);
+  border-radius: 186.5px 186.5px 0px 0px;
+  background-color: colors.$green-dark;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  filter: drop-shadow(50px 100px 100px rgba(0, 0, 0, 0.38));
+  .title-header {
+    font-family: "moniqa-thincondensed";
+    text-align: center;
+  }
+  @media screen and (max-width: size.$tablet) {
+    width: 100%;
+  border-radius: 100.5px 100.5px 0px 0px;
+
+  }
+}
+.company-info {
+  .text {
+    color: colors.$white;
+    text-decoration: none;
+    font-size: 48px;
+    font-family: "moniqa-extralight";
+  }
+  @media screen and (max-width: size.$tablet) {
+    .text{
+        font-size: 24px;
+    }
+  }
+}
+
+.start{
+    .button-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    @media screen and (max-width: size.$tablet) {
+        .button-wrapper{
+            margin-top: 20px;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+        }
+      }
+}
+
+.bottom {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  gap: 75px;
+  justify-content: space-between;
+  margin-top: 40px;
+  button {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media screen and (max-width: size.$tablet) {
+    flex-direction: column;
+  }
+}
+
+.social-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.middle {
+  color: colors.$white;
+  .title {
+    font-family: "moniqa-narrowparagraph";
+    font-size: 40px;
+    line-height: 108%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .working-hour {
+    font-family: "moniqa-light-italic";
+    font-size: 40px;
+    line-height: 108%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .subtext {
+    font-family: "Roboto Flex";
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  @media screen and (max-width: size.$tablet) {
+    .title, .working-hour{
+        font-size: 30px;
+    }
+    .title{
+        margin-top: 20px;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+    }
+  }
+}
+.socials{
+    button{
+        background-color: colors.$green-color;
+        border: none;
+    }
+}
+.end{
+    .subtext{
+        font-family: "moniqa-paragraph";
+        color: colors.$white;
+        font-size: 32px;
+        margin-top: 30px;
+    }
+    .text{
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: size.$tablet) {
+        .text{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .subtext{
+            text-align: center;
+        }
+    }
+}
+
+.bg-map {
+  position: relative;
+  height: 750px;
+  .logo {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    img {
+      width: 250px;
+    }
+  }
+  .bg {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+}
