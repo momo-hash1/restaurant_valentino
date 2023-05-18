@@ -1,0 +1,87 @@
+@use "../colors";
+@use "../size";
+
+.blog-slide {
+  display: grid!important;
+  grid-template-columns: 1.5fr 2.5fr;
+  gap: 40px;
+  color: colors.$white;
+  .image {
+    border-radius: 0px 209.5px 0px 0px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .date {
+    font-family: "moniqa-narrowparagraph";
+    font-size: 40px;
+    line-height: 108%;
+  }
+  .title {
+    font-family: "moniqa-light-italic";
+    font-size: 64px;
+    line-height: 108%;
+    margin-top: 20px;
+  }
+  .text {
+    margin-top: 20px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .wrapper {
+    margin-top: 40px;
+  }
+  .read {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 100%;
+    gap: 20px;
+    text-decoration: none;
+    color: colors.$white;
+    button {
+      border-color: colors.$green-color;
+    }
+    img {
+      transform: rotate(90deg);
+    }
+  }
+  @media screen and (max-width: size.$desktop_small) {
+    .title {
+      font-size: 44px;
+    }
+    .date {
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: size.$tablet) {
+    grid-template-columns: 1fr;
+    .image{
+        height: 500px;
+
+        width: 70%;
+    }
+    .read {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: size.$phone) {
+    .image{
+      width: 100%;
+    }
+    .button-circle{
+      width: 54px;
+      height: 54px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../base";
+@use "../page_components/header";
+@use "../colors";
+@use "../page_components/footer";
+@use "../size";
+@use "../text";
+@use "../components/reserve_table";
+@use "../components/container";
+@use "../components/textured_bg";
+@use "../components/blog_slide";
+
+
+.top-section{
+    margin-bottom: 200px;
+    .title-header{
+        text-align: center;
+        font-family: "moniqa-thincondensed";
+    }
+    .blogs{
+        margin-top: 80px;
+        display: grid;
+        gap: 100px;
+    }
+}

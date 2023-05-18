@@ -1,0 +1,148 @@
+@use "../base";
+@use "../page_components/header";
+@use "../colors";
+@use "../page_components/footer";
+@use "../size";
+@use "../text";
+@use "../components/reserve_table";
+@use "../components/container";
+@use "../components/textured_bg";
+
+
+.blog-thumbnail{
+    height: 595px;
+    border-radius: 0px 298.983px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    .thumnail, .arc-wrapper, .circles-wrapper, .date{
+        position: absolute;
+    }
+    
+    .thumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .arc-wrapper{
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .date{
+        font-size: 40px;
+        font-family: "moniqa-narrowparagraph";
+        color: colors.$white;
+        bottom: 50px;
+        left: 50px;
+        z-index: 3;
+    }
+    .arc{
+        margin-top: 45px;   
+        height: 630px;
+        border-radius: 281.542px 281.542px 0px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 560px;
+    }   
+    .circles-wrapper{
+        height: 100%;
+    }
+    .circles{
+        opacity: .2;
+        top: -80%;
+        width: 680px;
+        height: 680px;
+        left: -70%;
+        position: relative;
+    }
+    @media screen and (max-width: size.$tablet) {
+        border-radius: 0px 158.983px 0px 0px;
+        height: 395px;
+        .circles-wrapper{
+            display: none;
+        }
+        .arc{
+            width: 360px;
+        }
+    }
+    @media screen and (max-width: size.$desktop_small) {
+        .date{
+            font-size: 30px;
+            bottom: 25px;
+            left: 25px;
+        }
+    }
+    @media screen and (max-width: size.$phone) {
+        .arc-wrapper{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .arc{
+            margin-top:74px;
+            width: 100%;
+        }
+    }
+}
+
+.blog-content{
+    color: colors.$white;
+    margin-top: 60px;
+    position: relative;
+    .title, .text{
+        margin-right: 280px;
+    }
+    .title{
+        font-size: 96px;
+        font-family: "moniqa-thincondensed";
+        margin-bottom: 40px;
+    }
+    .text{
+        display: grid;
+        gap: 20px;
+        margin-bottom: 60px;
+
+    }
+    img{
+        height: 525px;
+        object-fit: cover;
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width: size.$desktop_small) {
+        .title{
+            font-size: 50px;
+        }
+        .title, .text{
+            margin-right: 180px;
+        }
+    }
+    @media screen and (max-width: size.$tablet) {
+        .title, .text{
+            margin-right: 0;
+        }
+    }
+}
+
+.top-section{
+    margin-bottom: 75px;
+}
+
+.back{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    div{
+        color: colors.$white;
+    }
+    button{
+        width: 64px;
+        height: 64px;
+        border-color: colors.$green-dark;
+        img{
+            width: 16px;
+            transform: rotate(-90deg);
+        }
+    }
+}

@@ -12,7 +12,7 @@ let event_swiper = new Swiper(".event-swiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
-  initialSlide:1,
+  initialSlide: 1,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -22,17 +22,16 @@ let event_swiper = new Swiper(".event-swiper", {
 let blog_swiper = new Swiper(".blog-swiper", {
   slidesPerView: 1,
   centeredSlides: true,
-  initialSlide:1,
+  initialSlide: 1,
+  allowTouchMove: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
 
-
-
-init_nav("event", event_swiper)
-init_nav("blog", blog_swiper)
-init_accordion()
-init_mobile_menu()
-init_popups()
+init_nav("event", event_swiper);
+init_nav("blog", blog_swiper);
+init_accordion();
+init_mobile_menu();
+init_popups();
