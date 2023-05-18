@@ -22,7 +22,7 @@
     font-family: "moniqa-thincondensed";
     color: colors.$white;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 200px;
   }
   .divider {
     margin-top: 10px;
@@ -49,6 +49,7 @@
         border-color: #292929;
         img{
             width: 16px;
+            transform: rotate(180deg);
         }
       }
     }

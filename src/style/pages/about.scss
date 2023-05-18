@@ -9,7 +9,6 @@
 @use "../components/textured_bg";
 
 .about-us {
-  margin-top: calc(50px + size.$mobile-header-height);
   .items {
     display: flex;
     justify-content: space-between;
@@ -253,6 +252,7 @@
     }
     video {
       display: none;
+      width: 100%;
     }
   }
   .video-overlay {
@@ -286,11 +286,6 @@
       display: block;
       margin-bottom: 40px;
 
-    }
-    @media screen and (max-width: size.$desktop_small) {
-        video{
-            width: 100%;
-        }
     }
   }
 }
